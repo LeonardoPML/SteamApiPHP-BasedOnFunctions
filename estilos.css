@@ -1,0 +1,21 @@
+.GetPlayerSummaries {
+	background-color: #b3e5fc;
+	font-weight: bold;
+	height: 100%;
+	width: 100%;
+	border: solid 2px black;
+}
+.GetNewsForApp {
+	background-color: #bbdefb;
+	font-weight: bold;
+	height: 100%;
+	width: 100%;
+	border: solid 2px black;
+}
+.GetGlobalAchievementPercentagesForApp {
+	background-color: #e8eaf6;
+	font-weight: bold;
+	height: 100%;
+	width: 100%;
+	border: solid 2px black;
+}
