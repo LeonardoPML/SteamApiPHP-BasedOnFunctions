@@ -1,6 +1,6 @@
 # SteamApiPHP-BasedOnFunctions
 
-Simple use , call the funciton and get the results.
+Simple use , call the function and get the results.
 
 ## Example
 
