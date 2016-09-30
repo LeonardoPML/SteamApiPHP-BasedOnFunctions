@@ -1,4 +1,4 @@
-<?php include "steamapi.class.php"; ?>
+<?php include "steamfunctions.php"; ?>
  <!DOCTYPE html>
  <html lang="pt-br">
  <head>
