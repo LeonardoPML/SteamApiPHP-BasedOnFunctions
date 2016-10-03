@@ -56,4 +56,26 @@
 	"loccityid" 				=> "$loccityid",
 	);
 }
+	function GetFriendList($api_key, $steam_id) {
+		$api_url = "http://api.steampowered.com/ISteamUser/GetFriendList/v0001/?key=$api_key&steamid=$steam_id&relationship=friend";
+		$api_file = file_get_contents("$api_url");
+		$api_decode = json_decode($api_file, FALSE);
+
+		return $api_decode;
+	}
+
+	function GetPlayerAchievements($api_key, $steam_id) {
+		$api_url = "http://api.steampowered.com/ISteamUserStats/GetPlayerAchievements/v0001/?appid=440&key=$api_key&steamid=$steam_id";
+		$api_file = file_get_contents("$api_url");
+		$api_decode = json_decode($api_file, TRUE);
+
+		return $api_decode;
+	}
+	function GetUserStatsForGame($api_key, $steam_id) {
+		$api_url = "http://api.steampowered.com/ISteamUserStats/GetUserStatsForGame/v0002/?appid=440&key=$api_key&steamid=$steam_id";
+		$api_file = file_get_contents("$api_url");
+		$api_decode = json_decode($api_file, TRUE);
+
+		return $api_decode;
+	}
 ?>

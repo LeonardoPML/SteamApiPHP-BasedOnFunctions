@@ -10,7 +10,7 @@
  	<div class="GetPlayerSummaries">
  		<center><h3>GetPlayerSummaries</h3></center>
  	<?php 
-		$api_key = "APIKEY";
+		$api_key = "API KEY HERE";
 		$steam_id = "76561197960435530";
 
 		echo "<img src='" . GetPlayerSummaries($api_key, $steam_id)['avatarfull'] ."'></br>"; 
@@ -58,6 +58,32 @@
  		}
  		
  	 ?>
+ 	</div>
+ 	</br>
+ 	<div class="GetFriendList">
+ 		<center><h3>GetFriendList</h3></center>
+ 		<?php 							//using another ID because it contains only 2 friends
+ 		foreach (GetFriendList($api_key, "76561198250284526")->friendslist->friends as $friends) {
+ 			$steamid = $friends->steamid;
+ 			$relationship = $friends->relationship;
+ 			$friend_since = $friends->friend_since;
+
+ 			echo "Friend ID: &nbsp;" . $steamid . "</br>";
+ 			echo "Relationship: &nbsp;" . $relationship . "</br>";
+ 			echo "Fiend Since: &nbsp;" . $friend_since . "</br>";
+ 			echo "</br>";
+ 		}
+ 	 ?>
+ 	</div>
+ 	</br>
+ 	<div class="GetPlayerAchievements">
+ 		<center><h3>GetPlayerAchievements</h3></center>
+ 		<a href="GetPlayerAchievements.php" target="_BLANK"> See here </a>
+ 	</div>
+ 	</br>
+ 	<div class="GetUserStatsForGame">
+ 		<center><h3>GetUserStatsForGame</h3></center>
+ 		<a href="GetUserStatsForGame.php" target="_BLANK"> See here </a>
  	</div>
  </body>
  </html>

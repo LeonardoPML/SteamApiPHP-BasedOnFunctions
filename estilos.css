@@ -19,3 +19,24 @@
 	width: 100%;
 	border: solid 2px black;
 }
+.GetFriendList {
+	background-color: #f9fbe7;
+	font-weight: bold;
+	height: 100%;
+	width: 100%;
+	border: solid 2px black;
+}
+.GetPlayerAchievements {
+	background-color: #e8f5e9;
+	font-weight: bold;
+	height: 100%;
+	width: 100%;
+	border: solid 2px black;
+}
+.GetUserStatsForGame {
+	background-color: #ccff90;
+	font-weight: bold;
+	height: 100%;
+	width: 100%;
+	border: solid 2px black;
+}
