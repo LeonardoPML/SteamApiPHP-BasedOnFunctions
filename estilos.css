@@ -40,3 +40,24 @@
 	width: 100%;
 	border: solid 2px black;
 }
+.GetOwnedGames {
+	background-color: #eceff1;
+	font-weight: bold;
+	height: 100%;
+	width: 100%;
+	border: solid 2px black;
+}
+.GetRecentlyPlayedGames {
+	background-color: #fbe9e7;
+	font-weight: bold;
+	height: 100%;
+	width: 100%;
+	border: solid 2px black;
+}
+.IsPlayingSharedGame {
+	background-color: #fafafa;
+	font-weight: bold;
+	height: 100%;
+	width: 100%;
+	border: solid 2px black;
+}

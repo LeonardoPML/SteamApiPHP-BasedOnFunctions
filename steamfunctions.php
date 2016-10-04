@@ -1,4 +1,6 @@
 <?php
+	$api_key = "API KEY HERE";
+
 	function GetNewsForApp($appid, $count) {
 		$api_url = "http://api.steampowered.com/ISteamNews/GetNewsForApp/v0002/?appid=$appid&count=$count&maxlength=300&format=json";
 		$api_file = file_get_contents("$api_url");
@@ -67,14 +69,35 @@
 	function GetPlayerAchievements($api_key, $steam_id) {
 		$api_url = "http://api.steampowered.com/ISteamUserStats/GetPlayerAchievements/v0001/?appid=440&key=$api_key&steamid=$steam_id";
 		$api_file = file_get_contents("$api_url");
-		$api_decode = json_decode($api_file, TRUE);
+		$api_decode = json_decode($api_file, FALSE);
 
 		return $api_decode;
 	}
 	function GetUserStatsForGame($api_key, $steam_id) {
 		$api_url = "http://api.steampowered.com/ISteamUserStats/GetUserStatsForGame/v0002/?appid=440&key=$api_key&steamid=$steam_id";
 		$api_file = file_get_contents("$api_url");
-		$api_decode = json_decode($api_file, TRUE);
+		$api_decode = json_decode($api_file, FALSE);
+
+		return $api_decode;
+	}
+	function GetOwnedGames($api_key, $steam_id) {
+		$api_url = "http://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key=$api_key&steamid=$steam_id&format=json";
+		$api_file = file_get_contents("$api_url");
+		$api_decode = json_decode($api_file, FALSE);
+
+		return $api_decode;
+	}
+	function GetRecentlyPlayedGames($api_key, $steam_id) {
+		$api_url = "http://api.steampowered.com/IPlayerService/GetRecentlyPlayedGames/v0001/?key=$api_key&steamid=$steam_id&format=json";
+		$api_file = file_get_contents("$api_url");
+		$api_decode = json_decode($api_file, FALSE);
+
+		return $api_decode;
+	}
+	function IsPlayingSharedGame($api_key, $steam_id) {
+		$api_url = "http://api.steampowered.com/IPlayerService/IsPlayingSharedGame/v0001/?key=$api_key&steamid=$steam_id&appid_playing=240&format=json";
+		$api_file = file_get_contents("$api_url");
+		$api_decode = json_decode($api_file, FALSE);
 
 		return $api_decode;
 	}
