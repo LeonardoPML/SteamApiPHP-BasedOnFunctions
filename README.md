@@ -19,3 +19,9 @@ Simple use , call the function and get the results.
 ```
   echo "<img src='" . GetPlayerSummaries($api_key, $steam_id)['avatarfull'] ."'>";
 ```
+
+**Getting an image using GetRecentlyPlayedGames**
+
+```
+	echo "<img src='http://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/$appid/$img_logo_url.jpg'> </br>";
+```
