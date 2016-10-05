@@ -113,5 +113,36 @@
  		?></h3></center>
  		<p>It was not possible to get the full response structure as the steamid was not playing a game shared.</p>
  	</div>
+ 	</br>
+ 	<div class="GetSchemaForGame">
+ 		<center><h3>GetSchemaForGame</h3></center>
+ 		<a href="GetSchemaForGame.php" target="_BLANK"> See here </a>
+ 	</div>
+ 	</br>
+ 	<div class="GetPlayerBans">
+ 		<center><h3>GetPlayerBans</h3></center>
+ 		<?php 								//more than one steam id can be used
+ 			foreach (GetPlayerBans($api_key, $steam_id)->players as $bans) {
+ 				$steamid = $bans->SteamId;
+ 				$communitybanned = $bans->CommunityBanned;
+ 				$vacbanned = $bans->VACBanned;
+ 				$numberosvacbans = $bans->NumberOfVACBans;
+ 				$dayssincelastban = $bans->DaysSinceLastBan;
+ 				$numberofgamebans = $bans->NumberOfGameBans;
+ 				$economybans = $bans->EconomyBan;
+
+ 				$vac = $vacbanned == false ? "No" : "Yes";
+ 				$community = $communitybanned == false ? "No" : "Yes";
+
+ 				echo "SteamID:  &nbsp;" . $steamid . "</br>";
+ 				echo "Community Banned:  &nbsp;" . $community ."</br>";
+ 				echo "Vac Banned:  &nbsp;" . $vac . "</br>";
+ 				echo "Number of Vac Bans:  &nbsp;" . $numberosvacbans . "</br>";
+ 				echo "Days Synce Last Ban:  &nbsp;" . $dayssincelastban . "</br>";
+ 				echo "Number of Game Bans:  &nbsp;" . $numberofgamebans . "</br>";
+ 				echo "Economy Bans:  &nbsp;" . $economybans . "</br>";
+ 			}
+ 		 ?>
+ 	</div>
  </body>
  </html>

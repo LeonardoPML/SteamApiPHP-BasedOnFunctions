@@ -101,4 +101,18 @@
 
 		return $api_decode;
 	}
+	function GetSchemaForGame($api_key, $appid) {
+		$api_url = "http://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=$api_key&appid=$appid";
+		$api_file = file_get_contents("$api_url");
+		$api_decode = json_decode($api_file, FALSE);
+
+		return $api_decode;
+	}
+	function GetPlayerBans($api_key, $steam_id) {
+		$api_url = "http://api.steampowered.com/ISteamUser/GetPlayerBans/v1/?key=$api_key&steamids=$steam_id";
+		$api_file = file_get_contents("$api_url");
+		$api_decode = json_decode($api_file, FALSE);
+
+		return $api_decode;
+	}
 ?>

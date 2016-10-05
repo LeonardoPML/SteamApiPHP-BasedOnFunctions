@@ -61,3 +61,17 @@
 	width: 100%;
 	border: solid 2px black;
 }
+.GetSchemaForGame {
+	background-color: #ff5252;
+	font-weight: bold;
+	height: 100%;
+	width: 100%;
+	border: solid 2px black;
+}
+.GetPlayerBans {
+	background-color: #c8e6c9 ;
+	font-weight: bold;
+	height: 100%;
+	width: 100%;
+	border: solid 2px black;
+}
