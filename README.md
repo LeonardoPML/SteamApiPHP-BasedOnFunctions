@@ -1,5 +1,7 @@
 # SteamApiPHP-BasedOnFunctions
 
+[![S](https://steamcommunity-a.akamaihd.net/public/images/signinthroughsteam/sits_01.png)](https://steamcommunity.com/)
+
 Simple use , call the function and get the results.
 
 ## Example
